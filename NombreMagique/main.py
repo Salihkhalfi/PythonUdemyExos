@@ -7,8 +7,14 @@ NOMBRE_MAX = 10
 
 def demander_nombre(nb_min , nb_max):
     # demander un nombre entre (1 et 10)
-    nombre_ret = int(input(f"Quel est le nombre magique entre {nb_min} et {nb_max}: "))
-    return nombre_ret
+    nombre_ret = 0
+    while nombre_ret == 0:
+        try:
+            nombre_ret = int(input(f"Quel est le nombre magique entre {nb_min} et {nb_max}: "))
+            
+        except ValueError:
+            print("Le nombre est non valide, veuillez resaisir !!")
+    return nombre_ret    
 
 nombre = 0
 # retour du nombre saisie
