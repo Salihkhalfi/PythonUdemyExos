@@ -35,10 +35,6 @@ def demander_nombre(nb_min, nb_max):
     return nombre_ret
 
 nombre = 0
-# retour du nombre saisie
-
-# nombre de vies
-
 
 while nombre != NOMBRE_MAGIQUE and vies > 0:
     # le nombre magique est plus grand
