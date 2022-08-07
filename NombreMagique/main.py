@@ -10,21 +10,24 @@ def demander_nombre(nb_min , nb_max):
     nombre_ret = int(input(f"Quel est le nombre magique entre {nb_min} et {nb_max}: "))
     return nombre_ret
 
+nombre = 0
 # retour du nombre saisie
-nombre = demander_nombre(NOMBRE_MIN, NOMBRE_MAX)
 
-# le nombre magique est plus grand
-if nombre > NOMBRE_MAGIQUE:
-    print("nombre magique est plus grand")
+while nombre != NOMBRE_MAGIQUE:
+    # le nombre magique est plus grand
+    nombre = demander_nombre(NOMBRE_MIN, NOMBRE_MAX)
 
-# le nombre magique est plus petit
+    if nombre > NOMBRE_MAGIQUE:
+        print("nombre magique est plus grand")
 
-elif nombre < NOMBRE_MAGIQUE:
-    print("nombre magique est plus petit")
+    # le nombre magique est plus petit
 
-# bravo vous avez gagné
-else:
-    print("Bravo vous avez gagné")
+    elif nombre < NOMBRE_MAGIQUE:
+        print("nombre magique est plus petit")
+
+    # bravo vous avez gagné
+    else:
+        print("Bravo vous avez gagné")
 
 
 
