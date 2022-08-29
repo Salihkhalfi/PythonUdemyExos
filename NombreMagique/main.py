@@ -51,12 +51,14 @@ while nombre != NOMBRE_MAGIQUE and vies > 0:
         print("nombre magique est plus petit")
         vies -= 1
         tentatives += 1
+        if vies == 0:
+            break
         print(f"Il vous reste {vies} vie(s)")
     
 # On test le cas ou on a pas de vies  ===> vies = 0, on a perdu
 if vies == 0:
 
-    print(f"Vous avez perdu, le nombre magique est : {NOMBRE_MAGIQUE}, vous n'avez pas de vies !!!")
+    print(f"Vous avez perdu, le nombre magique est : {NOMBRE_MAGIQUE}, Il vous reste O vies !!!")
 else:
     # Vous avez gagné, avec un nombre de vie > 0
     print(f"Bravo vous avez gagné après {tentatives} tentatives, et avec {vies} vies")
